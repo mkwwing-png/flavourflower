@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品系列 - 花花 花園 | 專業花藝設計</title>
+    <meta name="description" content="瀏覽我們精選的花藝產品系列，包括生日花束、情人節花束、結婚花球等。專業設計，新鮮花材，為您傳遞真摯情感">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 頂部通知欄 -->
+    <div class="top-notice">
+        <div class="container">
+            <p>🎉 新客戶優惠：首次訂購享85折 | 滿$500免運費</p>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>花花 花園</h1>
+                        <span>Flavour Flower Studio</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">首頁</a></li>
+                        <li class="dropdown">
+                            <a href="products.html" class="active">產品系列 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="products.html?category=birthday">生日花束</a></li>
+                                <li><a href="products.html?category=anniversary">週年紀念</a></li>
+                                <li><a href="products.html?category=love">情人節花束</a></li>
+                                <li><a href="products.html?category=wedding">結婚花球</a></li>
+                                <li><a href="products.html?category=graduation">畢業花束</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="搜尋產品..." id="searchInput">
+                        <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 頁面標題 -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>產品系列</h1>
+                <p>探索我們精選的花藝作品，為每個特別時刻找到完美選擇</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 產品篩選 -->
+    <section class="products-filter">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-categories">
+                    <button class="filter-btn active" data-category="all">全部產品</button>
+                    <button class="filter-btn" data-category="birthday">生日花束</button>
+                    <button class="filter-btn" data-category="anniversary">週年紀念</button>
+                    <button class="filter-btn" data-category="love">情人節花束</button>
+                    <button class="filter-btn" data-category="wedding">結婚花球</button>
+                    <button class="filter-btn" data-category="graduation">畢業花束</button>
+                </div>
+                <div class="filter-sort">
+                    <select id="sortSelect">
+                        <option value="default">預設排序</option>
+                        <option value="price-low">價格：低到高</option>
+                        <option value="price-high">價格：高到低</option>
+                        <option value="name">名稱排序</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 產品網格 -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- 產品將由JavaScript動態載入 -->
+            </div>
+            
+            <!-- 分頁控制 -->
+            <div class="pagination">
+                <button class="page-btn" id="prevPage">上一頁</button>
+                <div class="page-numbers" id="pageNumbers"></div>
+                <button class="page-btn" id="nextPage">下一頁</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 產品特色 -->
+    <section class="product-features">
+        <div class="container">
+            <div class="features-content">
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>快速送貨</h3>
+                    <p>九龍區當日送達，其他地區隔日送達</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-gift"></i>
+                    <h3>精緻包裝</h3>
+                    <p>免費禮品包裝服務，附贈心意卡</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>新鮮保證</h3>
+                    <p>所有花材保證新鮮，不滿意可退換</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>專業諮詢</h3>
+                    <p>花藝師一對一服務，為您推薦最合適選擇</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>花花 花園</h3>
+                        <p>專業花藝設計，為您的生活增添色彩</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>產品系列</h4>
+                    <ul>
+                        <li><a href="products.html?category=birthday">生日花束</a></li>
+                        <li><a href="products.html?category=anniversary">週年紀念</a></li>
+                        <li><a href="products.html?category=love">情人節花束</a></li>
+                        <li><a href="products.html?category=wedding">結婚花球</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>客戶服務</h4>
+                    <ul>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="#">送貨資訊</a></li>
+                        <li><a href="#">退換政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>聯絡資訊</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 香港</p>
+                        <p><i class="fas fa-phone"></i> 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> enquiry@huahua.com</p>
+                        <p><i class="fas fa-clock"></i> 營業時間: 9:00-21:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 花花 花園. 版權所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
