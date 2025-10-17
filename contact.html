@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 - 花花 花園 | 專業花藝設計諮詢</title>
+    <meta name="description" content="聯絡花花 花園。我們提供花藝設計諮詢、產品訂購、客製化服務等，歡迎與我們聯繫">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 頂部通知欄 -->
+    <div class="top-notice">
+        <div class="container">
+            <p>🎉 新客戶優惠：首次訂購享85折 | 滿$500免運費</p>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>花花 花園</h1>
+                        <span>Floral Art Studio</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">首頁</a></li>
+                        <li class="dropdown">
+                            <a href="products.html">產品系列 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="products.html?category=birthday">生日花束</a></li>
+                                <li><a href="products.html?category=anniversary">週年紀念</a></li>
+                                <li><a href="products.html?category=love">情人節花束</a></li>
+                                <li><a href="products.html?category=wedding">結婚花球</a></li>
+                                <li><a href="products.html?category=graduation">畢業花束</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="contact.html" class="active">聯絡我們</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="搜尋產品...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 頁面標題 -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>聯絡我們</h1>
+                <p>我們很樂意為您提供專業的花花 花園設計建議與服務</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡資訊 -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>網上店面</h3>
+                    <p>香港</p>
+                    <span>近台北101/世貿站</span>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>電話諮詢</h3>
+                    <p>1234 5678</p>
+                    <span>營業時間: 9:00-21:00</span>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>電子郵件</h3>
+                    <p>enquiry@huahua.com</p>
+                    <span>24小時內回覆</span>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>營業時間</h3>
+                    <p>週一至週日</p>
+                    <span>9:00 - 21:00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡表單與地圖 -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h2>發送訊息給我們</h2>
+                    <p>請填寫以下表格，我們會盡快與您聯繫</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">姓名 *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">電話 *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">電子郵件 *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">主題 *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">請選擇諮詢主題</option>
+                                <option value="product">產品詢問</option>
+                                <option value="custom">客製化設計</option>
+                                <option value="wedding">婚禮花藝</option>
+                                <option value="corporate">企業訂購</option>
+                                <option value="other">其他問題</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">訊息內容 *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="請詳細描述您的需求..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">發送訊息</button>
+                    </form>
+                </div>
+                
+                <div class="contact-map">
+                    <h2>我們的位置</h2>
+                    <div class="map-container">
+                        <!-- 這裡可以嵌入Google地圖 -->
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Google 地圖位置</p>
+                            <span>香港</span>
+                        </div>
+                    </div>
+                    <div class="location-info">
+                        <h4>交通資訊</h4>
+                        <ul>
+                            <li><i class="fas fa-subway"></i> 捷運：台北101/世貿站 2號出口，步行5分鐘</li>
+                            <li><i class="fas fa-bus"></i> 公車：世貿中心站，步行3分鐘</li>
+                            <li><i class="fas fa-car"></i> 停車：附近有多個收費停車場</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常見問題 -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>常見問題</h2>
+                <p>快速找到您需要的答案</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>如何訂購花束？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>您可以透過以下方式訂購：1. 在網站上直接選購 2. 來電訂購 3. 親臨店面選購。線上訂購滿$500享免運費優惠。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>送貨範圍和時間？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>台北市區提供當日送貨服務，需在下午2點前訂購。其他地區隔日送達。特殊時段（如情人節、母親節）建議提前預訂。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>可以客製化花束嗎？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>當然可以！我們提供完整的客製化服務，您可以指定花材、顏色、風格等。建議提前3-5天預約客製化設計服務。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>花束的保養方式？</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>收到花束後請立即拆開包裝，斜剪花莖，使用乾淨花瓶裝水並加入保鮮劑。避免陽光直射，定期換水可延長花期。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 緊急訂購 -->
+    <section class="emergency-order">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-text">
+                    <h2>急需送花？</h2>
+                    <p>我們提供緊急送貨服務，九龍區3小時內送達</p>
+                    <div class="emergency-contact">
+                        <a href="tel:0212345678" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            立即致電：02-1234-5678
+                        </a>
+                    </div>
+                </div>
+                <div class="emergency-image">
+                    <img src="images/emergency-delivery.jpg" alt="緊急送貨服務">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>花花 花園</h3>
+                        <p>專業花藝設計，為您的生活增添色彩</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>產品系列</h4>
+                    <ul>
+                        <li><a href="products.html?category=birthday">生日花束</a></li>
+                        <li><a href="products.html?category=anniversary">週年紀念</a></li>
+                        <li><a href="products.html?category=love">情人節花束</a></li>
+                        <li><a href="products.html?category=wedding">結婚花球</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>客戶服務</h4>
+                    <ul>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="#">送貨資訊</a></li>
+                        <li><a href="#">退換政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>聯絡資訊</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 香港</p>
+                        <p><i class="fas fa-phone"></i> 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> enquiry@huahua.com</p>
+                        <p><i class="fas fa-clock"></i> 營業時間: 9:00-21:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 花花 花園. 版權所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
