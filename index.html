@@ -3,32 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floral Art - Exquisite Floral Designs</title>
+    <title>花藝坊 - 專業花藝設計 | 鮮花速遞</title>
+    <meta name="description" content="專業花藝設計，鮮花速遞服務，為您提供最優質的花藝產品。生日花束、情人節花束、結婚花球、週年紀念花禮">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
+    <!-- 頂部通知欄 -->
+    <div class="top-notice">
+        <div class="container">
+            <p>🎉 新客戶優惠：首次訂購享85折 | 滿$500免運費</p>
+        </div>
+    </div>
+
+    <!-- 導航欄 -->
+    <header class="header">
+        <div class="container">
             <div class="nav-container">
-                <a href="index.html" class="nav-logo">Floral Art</a>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="cart.html" class="nav-link cart-icon">Cart <span id="cart-count">0</span></a></li>
-                </ul>
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>花藝坊</h1>
+                        <span>Floral Art Studio</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">首頁</a></li>
+                        <li class="dropdown">
+                            <a href="products.html">產品系列 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="products.html?category=birthday">生日花束</a></li>
+                                <li><a href="products.html?category=anniversary">週年紀念</a></li>
+                                <li><a href="products.html?category=love">情人節花束</a></li>
+                                <li><a href="products.html?category=wedding">結婚花球</a></li>
+                                <li><a href="products.html?category=graduation">畢業花束</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="搜尋產品...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Let Flowers Brighten Your Life</h1>
-            <p>Premium floral materials, professional floral designs</p>
-            <a href="products.html" class="cta-button">Shop Now</a>
+    <!-- 主橫幅 -->
+    <section class="hero-banner">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <h2>精緻花藝設計</h2>
+                    <h1>為特別時刻創造難忘回憶</h1>
+                    <p>專業花藝師精心設計，採用最新鮮花材，傳遞您最真摯的情感</p>
+                    <div class="hero-buttons">
+                        <a href="products.html" class="btn btn-primary">立即選購</a>
+                        <a href="about.html" class="btn btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-bouquet-1.jpg" alt="精緻花束">
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-truck"></i>
+                        <h4>即日送貨</h4>
+                        <p>九龍區當日送達</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-gift"></i>
+                        <h4>免費禮品包裝</h4>
+                        <p>精緻包裝服務</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-leaf"></i>
+                        <h4>新鮮花材</h4>
+                        <p>每日新鮮直送</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>專業諮詢</h4>
+                        <p>花藝師一對一服務</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- 精選分類 -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>精選花藝系列</h2>
+                <p>為不同場合精心設計的花藝作品</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/category-birthday.jpg" alt="生日花束">
+                        <div class="category-overlay">
+                            <a href="products.html?category=birthday" class="btn btn-outline">探索系列</a>
+                        </div>
+                    </div>
+                    <h3>生日花束</h3>
+                    <p>為壽星送上最溫暖的祝福</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/category-anniversary.jpg" alt="週年紀念">
+                        <div class="category-overlay">
+                            <a href="products.html?category=anniversary" class="btn btn-outline">探索系列</a>
+                        </div>
+                    </div>
+                    <h3>週年紀念</h3>
+                    <p>紀念每一個重要時刻</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/category-love.jpg" alt="情人節花束">
+                        <div class="category-overlay">
+                            <a href="products.html?category=love" class="btn btn-outline">探索系列</a>
+                        </div>
+                    </div>
+                    <h3>情人節花束</h3>
+                    <p>表達您的愛意與浪漫</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/category-wedding.jpg" alt="結婚花球">
+                        <div class="category-overlay">
+                            <a href="products.html?category=wedding" class="btn btn-outline">探索系列</a>
+                        </div>
+                    </div>
+                    <h3>結婚花球</h3>
+                    <p>完美婚禮的必備選擇</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 暢銷產品 -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>暢銷產品</h2>
+                <p>顧客最喜愛的花藝作品</p>
+            </div>
+            <div class="products-grid" id="featured-products">
+                <!-- 產品將由JavaScript動態載入 -->
+            </div>
+            <div class="section-footer">
+                <a href="products.html" class="btn btn-primary">瀏覽所有產品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務特色 -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-content">
+                <div class="services-text">
+                    <h2>為什麼選擇花藝坊？</h2>
+                    <div class="service-item">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <h4>專業花藝設計</h4>
+                            <p>擁有10年經驗的花藝師團隊，為您打造獨一無二的花藝作品</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-flower"></i>
+                        <div>
+                            <h4>優質新鮮花材</h4>
+                            <p>與本地花農合作，每日新鮮直送，確保花材最佳狀態</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h4>貼心客戶服務</h4>
+                            <p>一對一專業諮詢，根據您的需求推薦最合適的花藝設計</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-image">
+                    <img src="images/service-image.jpg" alt="專業花藝服務">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客戶評價 -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>客戶評價</h2>
+                <p>聽聽我們客戶的真實心聲</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"花束非常漂亮，包裝精緻，送貨準時。朋友收到後非常開心！"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>張小姐</h4>
+                        <span>生日花束客戶</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"結婚當天的花球完美無瑕，花藝師的專業建議讓整個婚禮更加完美。"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>陳太太</h4>
+                        <span>新娘花球客戶</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"每週訂購的辦公室花藝讓工作環境更加舒適，員工都很喜歡。"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>李經理</h4>
+                        <span>企業客戶</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 訂閱電子報 -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>訂閱我們的電子報</h3>
+                <p>獲取最新產品資訊、優惠活動和花藝知識</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="輸入您的電子郵件" required>
+                    <button type="submit" class="btn btn-primary">訂閱</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>花藝坊</h3>
+                        <p>專業花藝設計，為您的生活增添色彩</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>產品系列</h4>
+                    <ul>
+                        <li><a href="products.html?category=birthday">生日花束</a></li>
+                        <li><a href="products.html?category=anniversary">週年紀念</a></li>
+                        <li><a href="products.html?category=love">情人節花束</a></li>
+                        <li><a href="products.html?category=wedding">結婚花球</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>客戶服務</h4>
+                    <ul>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="#">送貨資訊</a></li>
+                        <li><a href="#">退換政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>聯絡資訊</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 香港</p>
+                        <p><i class="fas fa-phone"></i> 1234 5678</p>
+                        <p><i class="fas fa-envelope"></i> info@floralart.com</p>
+                        <p><i class="fas fa-clock"></i> 營業時間: 9:00-21:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 花藝坊. 版權所有</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
